@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<title>谁去拿外卖</title>
+	</head>
+	<body>
+		<div class="container">
+			
+			<div class="top">
+				<img src="img/beijing.png">
+				<img src="img/ludeng.png" >
+				<div class="top_malu">
+					<img src="img/malu1.png" >
+					<img src="img/malu2.png" >
+				</div>
+				<div class="qishou">
+					<img src="img/qishou1.png" >
+					<img src="img/qishou2.png" >
+				</div>
+			</div>
+			
+			
+			
+			<div class="bottom">
+			<!--<div class="bottom_demo">
+					<div class="biaoti">
+						<span>1</span>
+					</div>
+					<h3>100</h3>
+				</div> -->
+			</div>
+			
+
+		</div>
+	</body>
+	<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			
+			var n=0;
+			
+			$(".qishou").click(function(){
+				//  骑手换图片
+				$(".qishou>img:nth-child(2)").show().siblings().hide();
+				var timer = setInterval(my,1000);
+				// 恢复图片计时器
+				function my(){
+					$(".qishou>img:nth-child(1)").show().siblings().hide();
+					clearInterval(timer);
+				} 
+				
+				//生成新行数字
+				n++;
+				var m=Math.floor(Math.random()*10);
+				
+				var $ele=$('<div class="bottom_demo">'+
+					'<div class="biaoti">'+
+					'<span>'+n+'</span>'+
+					'</div>'+
+					'<h3>'+m+'</h3>'+
+					'</div>')
+				$(".bottom").append($ele);
+			})
+			
+
+			
+			
+		})
+	</script>
+</html>
