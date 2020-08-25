@@ -1,0 +1,14 @@
+.demo{
+	width: 200px;
+	height: 200px;
+	background: aqua;
+	/* 边框 宽度 类型 颜色 */
+	/* border: 10px solid red;*/
+/* 	border-top: 10px solid red; 
+	border-right: 10px solid yellow; */
+	/* 内边距 ：内容与边框之间的间距 */
+	padding: 20px 40px 060px 80px;
+	
+	/* 外边距 元素与元素之间的间距 */
+	
+}
